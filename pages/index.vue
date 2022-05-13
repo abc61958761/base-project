@@ -1,25 +1,7 @@
 <template>
-  <div class="container">
-    <div>
-      <NuxtLogo />
-      <h1 class="title">
-        {{ $t('home') }}
-      </h1>
-      <h2 class="subtitle">
-        Welcome to the View UI + Nuxt.js template
-      </h2>
-      <div class="links">
-        <Button type="primary" target="_blank" rel="noopener noreferrer" to="https://nuxtjs.org/">
-          Documentation
-        </Button>
-        <Button target="_blank" rel="noopener noreferrer" to="https://github.com/nuxt/nuxt.js">
-          GitHub
-        </Button>
-        <Button target="_blank" rel="noopener noreferrer" to="https://www.iviewui.com/">
-          View UI
-        </Button>
-      </div>
-    </div>
+  <div>
+    <About></About>
+    <Contact></Contact>
   </div>
 </template>
 
@@ -67,5 +49,25 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+@font-face {
+    font-family: Tempestua;
+    src: url("~/assets/fonts/Tempestua D.otf") format("opentype");
+}
+@font-face {
+    font-family: JMH;
+    src: url("~/assets/fonts/jmh_typewriter/JMH Typewriter.otf") format("opentype");
+}
+@font-face {
+    font-family: JMHBlack;
+    src: url("~/assets/fonts/jmh_typewriter/JMH Typewriter-Black.otf") format("opentype");
+}
+@font-face {
+    font-family: JMHBold;
+    src: url("~/assets/fonts/jmh_typewriter/JMH Typewriter-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: JMHThin;
+    src: url("~/assets/fonts/jmh_typewriter/JMH Typewriter-Thin.otf") format("opentype");
 }
 </style>
