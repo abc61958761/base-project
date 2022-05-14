@@ -80,4 +80,17 @@ export default {
   word-wrap:break-word;
   font-family:'JMH';
 }
+@media screen and (max-width: 600px) {
+  .event_title {
+    font-size: 40px;
+    line-height: 60px;
+  }
+  .event_title > img{
+   width:20px;
+  }
+  .event_title-bold{
+    font-size:50px;
+    line-height:50px;
+  }
+}
 </style>
