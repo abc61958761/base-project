@@ -46,6 +46,7 @@ export default {
 header{
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 .layout-header{
   height: 64px;
