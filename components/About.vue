@@ -49,8 +49,8 @@ export default {
 .about_title {
   color: #455336;
   font-size: 120px;
-  display: flex;
-  justify-content: space-around;
+  /* display: flex;
+  justify-content: space-around; */
   font-family: 'Tempestua';
   line-height: 93px;
   padding-top: 163px;
