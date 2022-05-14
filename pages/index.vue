@@ -1,6 +1,8 @@
 <template>
   <div>
     <About></About>
+    <Menus></Menus>
+    <Event></Event>
     <Contact></Contact>
   </div>
 </template>

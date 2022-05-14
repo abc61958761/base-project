@@ -1,5 +1,5 @@
 <template>
   <div>
-    about
+    Event
   </div>
 </template>
