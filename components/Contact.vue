@@ -5,79 +5,22 @@
       <div>ENQUIRE NOW</div>
       <img src="~/assets/images/Asset 7.svg">
     </div>
-    <div>
+    <div class="font-FMH">
       To reserve an area please fill in the form below,<br> and our Event Manager will be in touch shortly.
     </div>
-    <!-- <div>
-      <div>
-        <div class="contact_name">
-          NAME*
-        </div>
-        <div class="contact_name_item">
-          <div>
-            <Input v-model="fistName" class="contact_input" :border="false" />
-            <div>FIRST NAME</div>
-          </div>
-          <div>
-            <Input v-model="lastName" class="contact_input" :border="false" />
-            <div>LAST NAME</div>
-          </div>
-        </div>
-      </div>
-      <div class="contact_email">
-        <div>
-          <div class="contact_name">
-            EMAIL ADDRESS*
-          </div>
-          <Input v-model="email" class="contact_input" :border="false" />
-        </div>
-        <div>
-          <div class="contact_name">
-            PHONE NUMBER*
-          </div>
-          <Input v-model="phone" class="contact_input" :border="false" />
-        </div>
-      </div>
-      <div class="contact_name">
-        EVENT INFORMATION
-      </div>
-      <div class="contact_name_item">
-        <div>
-          <Input v-model="fistName" class="contact_input" :border="false" />
-          <div>EVENT DATE (DD/MM/YY)*</div>
-        </div>
-        <div>
-          <Input v-model="lastName" class="contact_input" :border="false" />
-          <div>EVENT TIME (HOURS)*</div>
-        </div>
-      </div>
-      <div class="contact_name_item">
-        <div>
-          <Input v-model="fistName" class="contact_input" :border="false" />
-          <div>OCCASION</div>
-        </div>
-        <div>
-          <Input v-model="lastName" class="contact_input" :border="false" />
-          <div>APPROXIMATE NUMBER OF GUESTS*</div>
-        </div>
-      </div>
-      <Button>SUBMIT</Button>
-      <div />
-      <div />
-    </div> -->
-    <Form ref="formValidate" :model="formValidate" :rules="ruleValidate" :label-width="80">
+    <Form ref="formValidate" :model="formValidate" :label-width="80">
       <label>NAME*</label>
       <Row>
         <Col span="12">
           <FormItem label="" prop="fistName">
             <Input v-model="formValidate.fistName" />
-            <p>First Name</p>
+            <p>FIRST NAME</p>
           </FormItem>
         </Col>
         <Col span="12">
-          <FormItem label="" prop="lastName">
+          <FormItem id="formRight" label="" prop="lastName">
             <Input v-model="formValidate.lastName" />
-            <p>Last Name</p>
+            <p>LAST NAME</p>
           </FormItem>
         </Col>
       </Row>
@@ -90,7 +33,7 @@
         </Col>
         <Col span="12">
           <label>PHONE NUMBER*</label>
-          <FormItem label="" prop="phone">
+          <FormItem id="formRight" label="" prop="phone">
             <Input v-model="formValidate.phone" />
           </FormItem>
         </Col>
@@ -104,7 +47,7 @@
           </FormItem>
         </Col>
         <Col span="12">
-          <FormItem label="" prop="time">
+          <FormItem id="formRight" label="" prop="time">
             <Input v-model="formValidate.time" />
             <p>EVENT TIME (HOURS)*</p>
           </FormItem>
@@ -116,21 +59,37 @@
           </FormItem>
         </Col>
         <Col span="12">
-          <FormItem label="" prop="app">
+          <FormItem id="formRight" label="" prop="app">
             <Input v-model="formValidate.app" />
             <p>APPROXIMATE NUMBER OF GUESTS*</p>
           </FormItem>
         </Col>
       </Row>
     </Form>
+    <Button class="submit_button">
+      SUBMIT
+    </Button>
+    <Col>
+      <div class="info-col">
+        <h1>OPENING HOURS</h1>
+        <p>{{ `Daily: ${daily.start} - ${daily.end} ` }}</p>
+      </div>
+      <div class="info-col">
+        <h1>CONTACT</h1>
+        <p>{{ companyInfo.address }}</p>
+        <p>{{ companyInfo.phone }}</p>
+        <p><a :href="companyInfo.facebook">FaceBook</a>&ensp;|&ensp;<a :href="companyInfo.instagram">Instagram</a> </p>
+      </div>
+    </Col>
   </div>
 </template>
 <script>
+import { companyInfo } from '@/api/index.js'
 export default {
     name: 'Contact',
     data: () => {
         return {
-            formValidate: {
+          formValidate: {
               fistName: null,
               lastName: null,
               email: null,
@@ -140,74 +99,71 @@ export default {
               occasion: null,
               app: null
             },
-            ruleValidate: {
-                fistName: [
-                    { required: true, message: 'The name cannot be empty', trigger: 'blur' }
-                ],
-                lastName: [
-                    { required: true, message: 'Mailbox cannot be empty', trigger: 'blur' },
-                    { type: 'email', message: 'Incorrect email format', trigger: 'blur' }
-                    ],
-                    city: [
-                        { required: true, message: 'Please select the city', trigger: 'change' }
-                    ],
-                    gender: [
-                        { required: true, message: 'Please select gender', trigger: 'change' }
-                    ],
-                    interest: [
-                        { required: true, type: 'array', min: 1, message: 'Choose at least one hobby', trigger: 'change' },
-                        { type: 'array', max: 2, message: 'Choose two hobbies at best', trigger: 'change' }
-                    ],
-                    date: [
-                        { required: true, type: 'date', message: 'Please select the date', trigger: 'change' }
-                    ],
-                    time: [
-                        { required: true, type: 'string', message: 'Please select time', trigger: 'change' }
-                    ],
-                    desc: [
-                        { required: true, message: 'Please enter a personal introduction', trigger: 'blur' },
-                        { type: 'string', min: 20, message: 'Introduce no less than 20 words', trigger: 'blur' }
-                    ]
-                }
+          companyInfo: {},
+          daily: {}
+          // 如果之後要驗證
+          //   ruleValidate: {
+          //     fistName: [
+          //           { required: true, message: 'The fistName cannot be empty', trigger: 'blur' }
+          //       ],
+          //     lastName: [
+          //           { required: true, message: 'The lastName cannot be empty', trigger: 'blur' }
+          //       ],
+          //     email: [
+          //               { required: true, message: 'The email cannot be empty', trigger: 'blur' }
+          //       ],
+          //     phone: [
+          //               { required: true, message: 'The phone cannot be empty', trigger: 'blur' }
+          //       ],
+          //     date: [
+          //               { required: true, message: 'The date cannot be empty', trigger: 'blur' }
+          //       ],
+          //     time: [
+          //               { required: true, message: 'The time cannot be empty', trigger: 'blur' }
+          //       ],
+          //     app: [
+          //               { required: true, message: 'The app cannot be empty', trigger: 'blur' }
+          //     ]
+          // }
         }
+    },
+   created () {
+      this.handleCompanyInfo()
+    },
+    methods: {
+     async handleCompanyInfo () {
+         const res = await companyInfo.getCompanyInfo()
+         this.companyInfo = res.data.data
+         this.daily = JSON.parse(res.data.data.daily)
+         this.$router.push({ query: { bookInfo: res.data.data.booking } })
+      }
     }
 }
 </script>
 <style scoped>
+.font-FMH{
+  font-family: 'JMH'
+}
 .contact {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background: #EEE1E0;
+    padding-bottom: 60px;
 }
-
-.contact_title {
+ .contact_title {
     display: flex;
     color: #455336;
-    /* font-size: 51px; */
 }
 .contact_title > img {
     width: 160px;
 }
 .contact_title > div {
-    color: #455336;
-    font-size: 51px;
-}
-.contact_name {
-    color: #455336;
-    font-size: 29px;
-}
-.contact_name_item {
-    display: flex;
-    color: #455336;
-    font-size: 20px;
-}
-.contact_email {
-    display: flex;
-}
-.contact_input {
-    border-bottom: 1px solid #455336;
+  color: #455336;
+  font-size: 51px;
+  padding: 0px 40px;
+  line-height: 90px;
 }
 
 ::v-deep .ivu-input{
@@ -216,13 +172,61 @@ export default {
   border-bottom: 1px solid #455336  !important;
   border-radius: 0px !important;
 }
+::v-deep .ivu-form-item-content{
+  margin-left: 0px !important;
+  margin-right: 40px;
+}
+label{
+  font-size: 24px;
+  font-weight: 600;
+  color: #455336;
+  font-family: "JMH";
+  line-height: 88px;
+  text-indent: 10px;
+}
+p{
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "JMH";
+  color: #455336;
+}
+::v-deep #formRight > .ivu-form-item-content{
+   margin-right: 0px !important;
+}
+::v-deep.ivu-btn{
+  background: #455336;
+  color: #fff;
+  font-weight: 600;
+  padding: 0 20px;
+  font-size: 29px;
+  height: 56px;
+  border-radius: 10px;
+}
+::v-deep.ivu-col{
+  margin: 0 auto;
+  text-align: center;
+}
+.info-col{
+  margin-top:60px;
+  color:#455336;
+}
 
 @media screen and (max-width: 600px) {
   .contact_title > img {
     width: 80px;
  }
   .contact_title > div{
-    font-size: 30px;
+    font-size: 20px;
   }
+  ::v-deep .ivu-form-item-content{
+    margin-left: 0px !important;
+    margin-right: 15px;
+ }
+  label{
+    font-size: 18px;
+  }
+  p {
+    font-size: 12px;
+ }
 }
 </style>

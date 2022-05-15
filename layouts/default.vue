@@ -12,7 +12,7 @@
       <Content class="content">
         <Nuxt />
       </Content>
-      <footer>
+      <footer @click="handleBooking()">
         <span class="footer-button">{{ info.toUpperCase() }}</span>
         <img :src="require('~/assets/images/Asset 5.svg')">
       </footer>
@@ -31,7 +31,16 @@ export default {
           { img: false, value: 'event' },
           { img: false, value: 'contact' }
         ],
-      info: 'Book now'
+      info: 'Book now',
+      infoUrl: ''
+    }
+  },
+  mounted () {
+    this.infoUrl = this.$route.query.bookInfo
+  },
+  methods: {
+    handleBooking () {
+      window.open(this.infoUrl)
     }
   }
 
@@ -63,12 +72,14 @@ header{
   transform: translate(0px,20px);
 }
 footer{
-  position: sticky;
+  position: fixed;
+  left: 50%;
   width: 90px;
   display: flex;
-  margin: 0 auto;
-  transform: translate(-10px);
+  /* margin: 0 auto; */
+  transform: translate(-50px);
   bottom: 0;
+  background:transparent;
 }
 .footer-button{
   position: absolute;
@@ -79,6 +90,6 @@ footer{
 }
 footer:hover{
   transition-timing-function:all 1s linear;
-  transform: scale(1.1,1.1) translate(-10px);
+  transform: scale(1.1,1.1) translate(-45px);
 }
 </style>
