@@ -8,103 +8,112 @@
     <div class="font-FMH">
       To reserve an area please fill in the form below,<br> and our Event Manager will be in touch shortly.
     </div>
-    <Form ref="formValidate" :model="formValidate" :label-width="80">
+    <!-- 要驗證Form 要加上  :rules="ruleValidate" -->
+    <Form ref="formValidate" :model="formValidate" :label-width="80" style="padding:20px">
       <label>NAME*</label>
       <Row>
         <Col span="12">
-          <FormItem label="" prop="fistName">
-            <Input v-model="formValidate.fistName" />
+          <FormItem label="" prop="firstName">
+            <Input v-model="formValidate.firstName" :border="false" />
             <p>FIRST NAME</p>
           </FormItem>
         </Col>
         <Col span="12">
           <FormItem id="formRight" label="" prop="lastName">
-            <Input v-model="formValidate.lastName" />
+            <Input v-model="formValidate.lastName" :border="false" />
             <p>LAST NAME</p>
           </FormItem>
         </Col>
       </Row>
       <Row>
-        <Col span="12">
+        <Col span="12" style="text-align:left">
           <label>EMAIL ADDRESS*</label>
           <FormItem label="" prop="email">
-            <Input v-model="formValidate.email" />
+            <Input v-model="formValidate.email" :border="false" />
           </FormItem>
         </Col>
-        <Col span="12">
+        <Col span="12" style="text-align:left">
           <label>PHONE NUMBER*</label>
           <FormItem id="formRight" label="" prop="phone">
-            <Input v-model="formValidate.phone" />
+            <Input v-model="formValidate.phone" :border="false" />
           </FormItem>
         </Col>
       </Row>
       <label>EVENT INFORMATION</label>
       <Row>
         <Col span="12">
-          <FormItem label="" prop="date">
-            <Input v-model="formValidate.date" />
+          <FormItem label="" prop="event_date">
+            <Input v-model="formValidate.event_date" :border="false" />
             <p>EVENT DATE (DD/MM/YY)*</p>
           </FormItem>
         </Col>
         <Col span="12">
-          <FormItem id="formRight" label="" prop="time">
-            <Input v-model="formValidate.time" />
+          <FormItem id="formRight" label="" prop="event_time">
+            <Input v-model="formValidate.event_time" :border="false" />
             <p>EVENT TIME (HOURS)*</p>
           </FormItem>
         </Col>
         <Col span="12">
           <FormItem label="" prop="occasion">
-            <Input v-model="formValidate.occasion" />
+            <Input v-model="formValidate.occasion" :border="false" />
             <p>OCCASION</p>
           </FormItem>
         </Col>
         <Col span="12">
-          <FormItem id="formRight" label="" prop="app">
-            <Input v-model="formValidate.app" />
+          <FormItem id="formRight" label="" prop="guests">
+            <Input v-model="formValidate.guests" :border="false" />
             <p>APPROXIMATE NUMBER OF GUESTS*</p>
           </FormItem>
         </Col>
       </Row>
     </Form>
-    <Button class="submit_button">
+    <Button class="submit_button" @click="handleSubmitData()">
       SUBMIT
     </Button>
     <Col>
       <div class="info-col">
         <h1>OPENING HOURS</h1>
-        <p>{{ `Daily: ${daily.start} - ${daily.end} ` }}</p>
+        <p class="info-col_content">
+          {{ `Daily: ${daily.start} - ${daily.end} ` }}
+        </p>
       </div>
       <div class="info-col">
         <h1>CONTACT</h1>
-        <p>{{ companyInfo.address }}</p>
-        <p>{{ companyInfo.phone }}</p>
-        <p><a :href="companyInfo.facebook">FaceBook</a>&ensp;|&ensp;<a :href="companyInfo.instagram">Instagram</a> </p>
+        <p class="info-col_content">
+          {{ companyInfo.address }}
+        </p>
+        <p class="info-col_content">
+          {{ companyInfo.phone }}
+        </p>
+        <p class="info-col_content">
+          <a :href="companyInfo.facebook">FaceBook</a>&ensp;|&ensp;<a :href="companyInfo.instagram">Instagram</a>
+        </p>
       </div>
     </Col>
   </div>
 </template>
 <script>
-import { companyInfo } from '@/api/index.js'
+import { companyInfo, addEvent } from '@/api/index.js'
 export default {
     name: 'Contact',
     data: () => {
         return {
           formValidate: {
-              fistName: null,
+              firstName: null,
               lastName: null,
               email: null,
               phone: null,
-              date: null,
-              time: null,
+              event_date: null,
+              event_time: null,
               occasion: null,
-              app: null
-            },
+              guests: null
+          },
           companyInfo: {},
           daily: {}
-          // 如果之後要驗證
-          //   ruleValidate: {
-          //     fistName: [
-          //           { required: true, message: 'The fistName cannot be empty', trigger: 'blur' }
+          // 如果之後要驗證再打開囉囉囉
+          // ruleValidate: {
+          //     firstName: [
+          //           { required: true, message: 'The firstName cannot be empty', trigger: 'blur' }
           //       ],
           //     lastName: [
           //           { required: true, message: 'The lastName cannot be empty', trigger: 'blur' }
@@ -115,14 +124,14 @@ export default {
           //     phone: [
           //               { required: true, message: 'The phone cannot be empty', trigger: 'blur' }
           //       ],
-          //     date: [
-          //               { required: true, message: 'The date cannot be empty', trigger: 'blur' }
+          //     event_date: [
+          //               { required: true, message: 'The event date cannot be empty', trigger: 'blur' }
           //       ],
-          //     time: [
-          //               { required: true, message: 'The time cannot be empty', trigger: 'blur' }
+          //     event_time: [
+          //               { required: true, message: 'The event time cannot be empty', trigger: 'blur' }
           //       ],
-          //     app: [
-          //               { required: true, message: 'The app cannot be empty', trigger: 'blur' }
+          //     guests: [
+          //               { required: true, message: 'The guests cannot be empty', trigger: 'blur' }
           //     ]
           // }
         }
@@ -132,10 +141,21 @@ export default {
     },
     methods: {
      async handleCompanyInfo () {
-         const res = await companyInfo.getCompanyInfo()
-         this.companyInfo = res.data.data
-         this.daily = JSON.parse(res.data.data.daily)
-         this.$router.push({ query: { bookInfo: res.data.data.booking } })
+        const res = await companyInfo.getCompanyInfo()
+        this.companyInfo = res.data.data
+        this.daily = JSON.parse(res.data.data.daily)
+        this.$router.push({ query: { bookInfo: res.data.data.booking } })
+      },
+      async handleSubmitData () {
+      // 要驗證請打開註解的部分，原本的註解
+      //  this.$refs.formValidate.validate(async (valid) => {
+      //    if (valid) {
+      //      await addEvent.addEvent(this.formValidate)
+      //     } else {
+      //     this.$Message.error('Please check yor data')
+      //     }
+      //   })
+        await addEvent.addEvent(this.formValidate)
       }
     }
 }
@@ -189,6 +209,7 @@ p{
   font-weight: 600;
   font-family: "JMH";
   color: #455336;
+  text-align: left;
 }
 ::v-deep #formRight > .ivu-form-item-content{
    margin-right: 0px !important;
@@ -208,6 +229,13 @@ p{
 }
 .info-col{
   margin-top:60px;
+  color:#455336;
+}
+.info-col_content{
+  font-weight: 300;
+  text-align: center;
+}
+.info-col_content > a{
   color:#455336;
 }
 

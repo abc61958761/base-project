@@ -72,6 +72,7 @@ header{
   transform: translate(0px,20px);
 }
 footer{
+  cursor: pointer;
   position: fixed;
   left: 50%;
   width: 90px;
