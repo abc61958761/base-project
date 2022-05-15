@@ -1,0 +1,455 @@
+{
+    "FOOD": [
+    {
+        "title": "for beef lovers",
+        "items": [{
+            "title": "特選級牛腹扒",
+            "content": "U.S.A. Grain-fed outside skirt<br/>為外橫隔膜位，肉味帶鮮甜味，油脂豐厚<br/>建議成熟度: 3成 / 5成"
+        }, {
+            "title": "頂級牛腰扒",
+            "content": "U.S.A. Prime grain-fed bottom sirloin flap<br/>連接⻄冷及臀部位置，肉質軟腍，肉味香濃，風味濃厚<br/>建議成熟度: 3成 / 5成 / 7成"
+        }, {
+            "title": "頂級牛板翼扒",
+            "content": "U.S.A. Prime grain-fed chuck flap tail<br/>為梅花肉中心部份，屬牛隻珍貴部位，油花最豐富，口感極柔嫩<br/>建議成熟度: 3成 / 5成"
+        }, {
+            "title": "頂級牛柳仔扒",
+            "content": "U.S.A. Prime grain-fed shoulder tender<br/>位於肩胛位裏面，肉汁豐富而且軟腍，比起一般牛柳更加細緻<br/>建議成熟度: 3成 / 5成"
+        }, {
+            "title": "慢煮24小時美國穀飼牛小排",
+            "content": "24-hours Slow-cooked short ribs<br/>迷你版牛小排，經過24小時慢煮，肉質軟腍而且肉味鮮甜"
+        }, {
+            "title": "特選級牛冧上蓋扒",
+            "content": "U.S.A. Top sirloin cap (culotte steak)<br/>連接牛腰及臀部位置，油脂均勻分佈，肉味香濃，口感十足<br/>建議成熟度: 3成"
+        }]
+    }, 
+    {
+        "title": "something out of <br/> the world",
+        "items": [{
+            "title": "爆醬芝士熱菇熱菇",
+            "content": "Baked portobello, cheese & kimchi mayo<br/>港人至愛拉絲芝士配搭泡菜味酸辣醬汁"
+        }, {
+            "title": "單飛雞翼 (腐乳味/山椒味)",
+            "content": "Fried single bone chicken wings<br/>(fermented bean curd / Japanese sansho)<br/>韓式醬混入腐乳，簡直混醬！又可以試下日式微辣山椒<br/>口味，OISHI DES!"
+        }, {
+            "title": "媽咪炒蟹",
+            "content": "Mamee crispy soft shell crab<br/>創作靈感來自避風塘炒蟹，用媽咪麵做成脆漿，炸到脆卜<br/>卜再加上自家調配辣味粉！藍毛毛演唱會真係要開始喇！"
+        }, {
+            "title": "四川担担溫泉蛋卡邦尼意粉",
+            "content": "Sichuan carbonara wih onsen tamago<br/>用担担麵必備麻醬、辣醬及花椒做出川式火辣卡邦尼意粉"
+        }, {
+            "title": "鬼佬黯然銷魂飯",
+            "content": "God of Cookery - Sorrowful Rice<br/>Slow-cooked duck breast risotto, fried egg, HK-<br/>style BBQ pork sauce<br/>鴨胸叉燒配意大利飯，用西式料理呈現港產電影中嘅經典菜式<br/>有一種哀傷感⋯⋯係洋蔥，我加咗洋蔥"
+        }, {
+            "title": "甜醋慢煮安格斯牛面肉",
+            "content": "Braised Angus beef cheek,<br/>Chinese sweet vinegar sauce, mashed potato<br/>〖坐月的回憶〗 用家傳戶曉嘅甜醋燉煮牛味十足嘅安格斯牛面珠<br/>配香滑薯蓉，啱哂中意食薑醋又唔中意吮骨嘅你！"
+        }]
+    },
+    {
+        "title": "something to share",
+        "items": {
+            "left": [{
+                "title": "金箔甜醋泡泡糖心蛋",
+                "content": "Golden soft-boiled egg, sweet rice vinegar<br/>自製Q彈溏心蛋加薑汁泡泡，完美二次創作港式豬腳<br/>薑中嘅甜醋蛋t"
+            }, {
+                "title": "香檸牛油果三文魚漬",
+                "content": "Salmon avocado ceviche<br/>清新開胃"
+            }, {
+                "title": "焗韓式椰菜花",
+                "content": "Korean baked cauliflower<br/>韓國泡菜醬，惹味之選"
+            }, {
+                "title": "紅菜頭沙律",
+                "content": "Beetroot salad<br/>SUPERFOOD 沙律組合，營養爆燈！"
+            }, {
+                "title": "西班牙紅蝦薄切",
+                "content": "Carabinero de carpaccio<br/>薄切西班牙紅蝦配欖油魚子同黑醋魚子，超鮮味"
+            }],
+            "right": [{
+                "title": "招牌鵝肝燉蛋",
+                "content": "Foie gras creme brulee<br/>將鵝肝拌入法式焦糖燉蛋，配極薄脆多士"
+            }, {
+                "title": "香煎鵝肝多士",
+                "content": "Foie gras on toast<br/>煎到外脆內軟嘅法國鵝肝"
+            }, {
+                "title": "鵝肝二重奏",
+                "content": "The DUO<br/>Why not both? 打孖上 雙重享受！"
+            }]
+        }
+    }, 
+    {
+        "title": "something BISTRO",
+        "items": [{
+            "title": "意式香草蕃茄意粉",
+            "content": "Spaghetti pomodoro<br/>經典意大利家常菜"
+        }, {
+            "title": "烤啖啖肉三文魚扒",
+            "content": "Grilled salmon, mashed potato, salmon<br/> roe, wasabi mayo<br/>配三文魚子醬油漬同滑捋捋薯蓉"
+        }, {
+            "title": "黑魚子醬溫泉蛋蟹皇卡邦尼",
+            "content": "Caviar crab onsen tamago carbonara"
+        }, {
+            "title": "火灸赤蝦海膽醬櫻花蝦意大利飯",
+            "content": "Uni risotto, red prawn, sakura shrimp"
+        }, {
+            "title": "法式豬鞍扒",
+            "content": "Iberico pork chop, honey mustard, apple chutney<br/>識食一定食七成熟，粉嫩幼滑最 perfect！<br/>配蜜糖芥末醬及自家製蘋果醬"
+        }, {
+            "title": "香煎法式羊架",
+            "content": "Lamb rack, quinoa salad, herbs yoghurt<br/>配 superfood 藜麥沙律及香草乳酪"
+        }]
+    }, 
+    {
+        "title": "DESSERT STOMACH",
+        "items": [{
+            "title": "懷舊糖蔥餅拿破崙",
+            "content": "HK sugar crackers Napoleon<br/>香港人嘅味覺回憶，拿破崙都無食過！"
+        }, {
+            "title": "邪惡冰火布朗尼配自家製雪糕",
+            "content": "Hot chocolate brownie, caramel sauce, gelato<br/>流心朱古力布朗尼，配軟綿綿意大利雪糕，冰火交融"
+        }, {
+            "title": "仙氣騰騰焦糖燉蛋",
+            "content": "Misty creme brulee"
+        }]
+    }],
+    "DRINK": {
+        "ALCOHOLIC": [{
+            "title": "our wine",
+            "others": {
+                "left": [{
+                    "title": "CHAMPAGNE",
+                    "type": "title"
+                }, {
+                    "title": "Piper Heidsieck Brut NV",
+                    "type": "item",
+                    "content": "Reims, France <br/>法國香檳，泡沫細緻優雅，慶祝一定要開支嚟share!"
+                }],
+                "right": [{
+                    "title": "SPARKLING",
+                    "type": "title"
+                }, {
+                    "title": "Bottaga Moscato",
+                    "type": "item",
+                    "content": "Veneto, Italy<br/>金黃色汽泡，帶有複雜玫瑰花香，蘋果和蜜糖甜味，<br/>最適合優雅女士們"
+                }, {
+                    "title": "Gran Palas Gran Reserve Cava Brut",
+                    "type": "item",
+                    "content": "Cava, Spain"
+                }]
+            },
+            "items": [
+            {
+                "title": "RED",
+                "type": "title"
+            }, {
+                "title": "",
+                "type": "title"
+            }, {
+                "title": "Luis Felipe Edwards, Cabernet<br/> Sauvignon",
+                "type": "item",
+                "content": "Central Valley, Chile"
+            }, {
+                "title": "Harvest Syrah",
+                "type": "item",
+                "content": "Adelaide Hills, Australia"
+            }, {
+                "title": "Paciencia Vino De Espana,<br/> Tempranillo",
+                "type": "item",
+                "content": "Toro, Spain<br/>米芝蓮三星餐廳專用酒"
+            }, {
+                "title": "Blason d’Issan, Merlot&Cabernet<br/>Sauvignon",
+                "type": "item",
+                "content": "Margaux, France<br/>迪仙副牌，酒體豐厚，果香優美。<br/>迪仙莊園的酒是很多歐洲國家皇室的所愛，經常被選作皇家宴會！"
+            }, {
+                "title": "Chevalier de Lascombes, Merlot&<br/>Cabernet Sauvignon",
+                "type": "item",
+                "content": "Margaux, France<br/>法國波爾多力士金副牌，柔和，酒體柔順與肉類 perfect match"
+            }, {
+                "title": "",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "WHITE",
+                "type": "title"
+            }, {
+                "title": "",
+                "type": "title"
+            }, {
+                "title": "Luis Felipe Edwards, Chardonnay",
+                "type": "item",
+                "content": "Central Valley, Chile"
+            }, {
+                "title": "Kessler, Riesling",
+                "type": "item",
+                "content": "Rheinhessen, Germany"
+            }, {
+                "title": "Mills Reef, Sauvignon Blanc",
+                "type": "item",
+                "content": "Marlborough, New Zealand"
+            }, {
+                "title": "Gris de Koshu",
+                "type": "item",
+                "content": "Yamanashi, Japan<br/>同木村對飲不是夢！唔駛去東京，都可試到日劇 Grand Maison <br/>的神級白酒"
+            }, {
+                "title": "Chateau Chasse-Spleen, Sauvignon<br/> Blanc",
+                "type": "item",
+                "content": "Sémillon, France<br/>有豐富柑橘，檸檬香味，最夾豬肉、雞肉"
+            }]
+        }, {
+            "title": "cocktails",
+            "discript": "Ready to booze it up?",
+            "items": [{
+                "title": "Tropical Sunshine",
+                "type": "item",
+                "content": "Tequila, triple sec, passion fruit puree,<br/> pineapple juice, sprite"
+            }, {
+                "title": "Yuzu Blossom",
+                "type": "item",
+                "content": "Gin, yuzu puree, lime juice, jasmine tea, egg<br/> white, honey, bitters"
+            }, {
+                "title": "Simple Tea",
+                "subTitle": "新抱茶",
+                "type": "item",
+                "content": "Tequila, triple sec, passion fruit puree,<br/> pineapple juice, sprite"
+            }, {
+                "title": "",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "COCKTAILS FOR TWO",
+                "type": "title",
+                "subTitle": "#雞尾酒群組"
+            }, {
+                "title": "",
+                "type": "title"
+            }, {
+                "title": "Jade",
+                "type": "item",
+                "content": "Gin, cucumber syrup, lime juice, soda water"
+            }, {
+                "title": "Golden",
+                "type": "item",
+                "content": "Vodka, triple sec, syrup, oolong tea"
+            }, {
+                "title": "Nature",
+                "type": "item",
+                "content": "Vodka, elderflower liqueur, tonic water"
+            }, {
+                "title": "Purple",
+                "type": "item",
+                "content": "Vodka, lychee liqueur, lime juice, butterfly<br/> pea flower, sprite"
+            }]
+        }, {
+            "title": "spirits",
+            "items": [{
+                "title": "WHISKY",
+                "type": "title"
+            }, {
+                "title": "",
+                "type": "title"
+            }, {
+                "title": "Jack Daniel’s Tennessee",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "John Jameson Irish Whiskey",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Johnnie Walker Black Label<br/> Blended",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "The Macallan Sherry Oak 12<br/> Years Single Malt",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "GIN",
+                "type": "title"
+            }, {
+                "title": "",
+                "type": "title"
+            }, {
+                "title": "NIP Hong Kong Rare Dry Gin",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Roku Japanese Craft Gin",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Hendrick's Gin",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "OTHERS",
+                "type": "title"
+            }, {
+                "title": "",
+                "type": "title"
+            }, {
+                "title": "Grey Goose Vodka",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Olmeca Tequila",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Bacardi Rum",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Bailey’s",
+                "type": "item",
+                "content": ""
+            }, {
+                "title": "Kahlua",
+                "type": "item",
+                "content": ""
+            }]
+        }, {
+            "title": "TAP BEERs",
+            "items": [{
+                "title": "1664 Blanc / Asahi / Yebisu/ Inedit Damm",
+                "type": "item",
+                "content": ""
+            }]
+        }],
+        "NON-ALCOHOLIC": [{
+            "title": "MOCKtails",
+            "discript": "千杯不醉",
+            "items": [{
+                "title": "Bistro Punch",
+                "content": "Pineapple juice, orange juice, cranberry juice"
+            }, {
+                "title": "Sparkling Iced Tea",
+                "content": "Lemon juice, soda water, english tea"
+            }, {
+                "title": "Sparkling Lychee Lemonade",
+                "content": "Lychee puree, lemon juice, syrup, soda water"
+            }]
+        }, {
+            "title": "COFFEE",
+            "discript": "",
+            "items": [{
+                "title": "Fresh Coffee",
+                "content": "Espresso, Americano, Latte, Cappuccino, Mocha, Caffe Macchiato"
+            }, {
+                "title": "Okinawa Black Sugar Coffee",
+                "content": ""
+            }, {
+                "title": "Roasted Hazelnut Coffee",
+                "content": ""
+            }, {
+                "title": "Salted Sakura Coffee",
+                "content": ""
+            }, {
+                "title": "Dirty",
+                "content": ""
+            }, {
+                "title": "Rose Latte",
+                "content": ""
+            }, {
+                "title": "Espresso Tonic",
+                "content": ""
+            }, {
+                "title": "Spanish Coffee",
+                "content": ""
+            }, {
+                "title": "Espresso Martini",
+                "content": ""
+            }, {
+                "title": "Crème Brulee Coffee",
+                "content": ""
+            }, {
+                "title": "Irish Coffee",
+                "content": ""
+            }, {
+                "title": "Bailey’s Coffee",
+                "content": ""
+            }]
+        }, {
+            "title": "HK STYLE",
+            "discript": "",
+            "items": [{
+                "title": "Hk Milk Tea",
+                "content": ""
+            }, {
+                "title": "Lemon Tea",
+                "content": ""
+            }, {
+                "title": "Lemon Water",
+                "content": ""
+            }, {
+                "title": "Chocolate",
+                "content": ""
+            }, {
+                "title": "Soft Drinks",
+                "content": "Coke/coke Zero/sprite"
+            }, {
+                "title": "Juice",
+                "content": "Apple/cranberry/orange/pineapple"
+            }, {
+                "title": "Black Cow",
+                "content": "Coke, Ice Cream On Top"
+            }]
+        }, {
+            "title": "KEEP YOU HYDRATED",
+            "discript": "",
+            "items": [{
+                "title": "Acqua Panna",
+                "content": ""
+            }, {
+                "title": "San Pellegrino",
+                "content": ""
+            }]
+        }, {
+            "title": "bistro floral tea",
+            "discript": "",
+            "items": [{
+                "title": "Rose Jasmine",
+                "content": ""
+            }, {
+                "title": "Liquorice Cool Mint",
+                "content": ""
+            }, {
+                "title": "Osmanthus Oolong",
+                "content": ""
+            }, {
+                "title": "Blue Flower Earl Grey",
+                "content": ""
+            }, {
+                "title": "Strawberry Lychee Green Tea",
+                "content": ""
+            }]
+        }]
+    },
+    "SHISHA": {
+        "title": "Ladybug Recommendation",
+        "items": [{
+            "title": "LadyBug Signature",
+            "content": "Mango, Vanilla, Mint, Lemon, Grape"
+        }, {
+            "title": "Tropical Storm",
+            "content": "Mango, Grape, Lemon Lime, Mint"
+        }, {
+            "title": "Grape Mojito",
+            "content": "Grape, Mint & Lime"
+        }, {
+            "title": "Sunny Garden",
+            "content": "Rose, Lemon, Vanilla, Mint"
+        }, {
+            "title": "CODE RED",
+            "content": "Strawberry, Mint, Rose"
+        }],
+        "other": {
+            "title": "PICK YOUR OWN FLAVOUR",
+            "subTitle": "任君選擇",
+            "material": "Mango / Orange / Melon / Blueberry / Mint / Apple / Rose /<br/> Grape / Peach / Pear / Lemon & Lime / Strawberry & Lychee / <br/>Ice Grapefruit / Pineapple Ice",
+            "guzzle": "紅酒底 Red wine base / 波本威士忌底 Bourbon whisky base / 咖啡底 Coffee base / <br/> 烈酒底 Spirit base / 冰底 Ice base / 加炭 慢慢嘆 Refill charcoal"
+        }
+    }
+}
