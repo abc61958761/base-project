@@ -387,6 +387,10 @@ export default {
   display: flex; 
   align-items: center;
 }
+.DRINK_menu_content_title {
+  display: flex;
+  align-items: baseline;
+}
 @media screen and (max-width: 600px) {
   .menu {
     padding: 16px;
@@ -466,6 +470,9 @@ export default {
   }
   .DRINK_menu_item_title {
     font-size: 18px;
+  }
+  .DRINK_menu_content_title{
+    flex-direction: column;
   }
   .DRINK_menu_content_title > .menu_content_title {
     margin-bottom: 0px;
