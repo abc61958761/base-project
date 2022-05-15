@@ -171,6 +171,7 @@ export default {
     align-items: center;
     background: #EEE1E0;
     padding-bottom: 60px;
+    padding-top: 130px;
 }
  .contact_title {
     display: flex;
@@ -240,11 +241,16 @@ p{
 }
 
 @media screen and (max-width: 600px) {
+.contact {
+    padding-top: 60px;
+}
   .contact_title > img {
     width: 80px;
  }
   .contact_title > div{
     font-size: 20px;
+    line-height: 80px;
+    padding: 0 20px;
   }
   ::v-deep .ivu-form-item-content{
     margin-left: 0px !important;
