@@ -1,9 +1,9 @@
 <template>
   <div>
-    <About></About>
-    <Menus></Menus>
-    <Event></Event>
-    <Contact></Contact>
+    <About id="about"></About>
+    <Menus id="menu"></Menus>
+    <Event id="event"></Event>
+    <Contact id="contact"></Contact>
   </div>
 </template>
 

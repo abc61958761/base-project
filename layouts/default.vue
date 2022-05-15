@@ -5,7 +5,7 @@
         <ul class="layout-header">
           <li v-for="(tab,idx) of tabs" :key="idx">
             <img v-show="tab.img" :src="tab.value">
-            <span v-show="!tab.img">{{ tab.value.toUpperCase() }} </span>
+            <a v-show="!tab.img" :href="`#${tab.value}`">{{tab.value.toUpperCase()}}</a>
           </li>
         </ul>
       </header>
@@ -46,16 +46,20 @@ export default {
 
 }
 </script>
-
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>
 <style  scoped>
 .content {
   min-height: 100vh;
-  padding-top: 64px;
+  margin-top: 64px;
 }
 header{
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 99;
 }
 .layout-header{
   height: 64px;
@@ -66,6 +70,13 @@ header{
   list-style-type: none;
   color: #fff;
   font-family: 'JMH';
+}
+.layout-header >li{
+  cursor: pointer;
+}
+.layout-header > li > a{
+  color: #ffffff;
+  padding: 14px 25px;
 }
 .layout-header >li > img{
   width: 120px;
@@ -92,5 +103,10 @@ footer{
 footer:hover{
   transition-timing-function:all 1s linear;
   transform: scale(1.1,1.1) translate(-45px);
+}
+@media screen and (max-width: 600px) {
+  .layout-header > li > a{
+    padding: 0;
+  }
 }
 </style>
